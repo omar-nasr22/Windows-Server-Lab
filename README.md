@@ -26,5 +26,6 @@ It focuses on core system administration tasks commonly required for IT System A
 ## Project Purpose
 This lab was created to strengthen practical understanding of Windows Server administration and to simulate real-world enterprise scenarios.
 
-## Status
-Completed
+## Author
+Omar Nasr
+
