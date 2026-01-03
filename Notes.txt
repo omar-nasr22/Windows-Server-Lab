@@ -1,0 +1,42 @@
+Windows Server Clean Lab – Technical Notes
+
+1. Server Configuration
+- Installed Windows Server on a virtual machine.
+- Configured a static IP address to ensure stable communication.
+- Promoted the server to a Domain Controller.
+- Created a new Active Directory forest (lab.local).
+- DNS was installed automatically with AD DS.
+
+2. Active Directory Structure
+- Created Organizational Units (OUs) for departments:
+  IT, HR, Finance, Sales.
+- Created security groups for each department.
+- Created domain users and assigned them to the appropriate groups.
+- Group-based management was used instead of assigning permissions directly to users.
+
+3. DHCP Configuration
+- Installed and authorized the DHCP role.
+- Created an IPv4 scope to automatically assign IP addresses to clients.
+- Configured DHCP options:
+  - Default Gateway
+  - DNS Server (Domain Controller)
+  - Domain Name (lab.local)
+
+4. Client Machine
+- Created a Windows client virtual machine.
+- Client successfully received an IP address from DHCP.
+- Client machine joined the lab.local domain.
+- Verified domain login using standard domain users.
+
+5. Group Policy Implementation
+- Created a Group Policy Object (HR-Restrictions) to restrict Control Panel access for HR users.
+- Created a Group Policy Object (IT-Map-Drive) to map a network drive automatically for IT users.
+- Policies were linked to the appropriate Organizational Units.
+- Group Policy functionality was verified on client machines.
+
+6. Testing and Validation
+- Tested user login with different department users.
+- Verified Group Policy application using gpupdate and user testing.
+- Confirmed network drive availability and permissions.
+
+This lab simulates a small enterprise Windows Server environment and focuses on core system administration and help desk tasks.
